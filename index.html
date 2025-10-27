@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav id="menu">
-            <h1>ReciclaSmart</h1>
-            <button>Cambiar a tema oscuro</button>
-        </nav>
+      <nav id="menu">
+        <h1>ReciclaSmart</h1>
+        <button id="togle-theme">Cambiar a tema oscuro</button>
+        <script>
+          const togleButton = document.getElementById("togle-theme");
+          togleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            togleButton.textContent = document.body.classList.contains("dark")
+              ? "Cambiar a tema oscuro"
+              : "Cambiar a tema claro";
+          });
+        </script>
+        
+      </nav>
     </header>
 
     <main>
-        <div id="contenedorLanding">
-            <h2>Haz del reciclaje tu aliado con la teconoloía</h2>
-            <h3>ReciclaSmart te ayuda a reformar de forma mas eficiente y cómoda desde cualquier lugar </h3>
-        </div>
-        <div id="contenedorList">
-            <h4>Funciones Principales</h4>
-            <ul>
-                <li>
-                    <p>Escanea códigos de productos para conocer cómo reciclarlos</p>
-                    <p>Encuentra puntos de reciclaje cercanos</p>
-                    <p>Consulta tus estadísticas personales de reciclaje</p>
-                </li>
-            </ul>
-            <button id="greenButton">
-                <a href="">Empieza a Reciclar Ahora</a>
-            </button>
-        </div>
+      <div id="contenedorLanding">
+        <h2>Haz del reciclaje tu aliado con la teconoloía</h2>
+        <h3>
+          ReciclaSmart te ayuda a reformar de forma mas eficiente y cómoda desde
+          cualquier lugar
+        </h3>
+      </div>
+      <div id="contenedorList">
+        <h4>Funciones Principales</h4>
+        <ul>
+          <li>
+            <p>Escanea códigos de productos para conocer cómo reciclarlos</p>
+            <p>Encuentra puntos de reciclaje cercanos</p>
+            <p>Consulta tus estadísticas personales de reciclaje</p>
+          </li>
+        </ul>
+        <button id="greenButton">
+          <a href="">Empieza a Reciclar Ahora</a>
+        </button>
+      </div>
     </main>
 
     <footer>
-        <p>© 2025 ReciclaSmart - Recicla Smart</p>
-        <!-- holi -->
+      <p>© 2025 ReciclaSmart - Recicla Smart</p>
     </footer>
-</body>
-
+  </body>
 </html>
