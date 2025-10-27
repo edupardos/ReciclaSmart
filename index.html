@@ -11,9 +11,9 @@
     <header>
       <nav id="menu">
         <h1>ReciclaSmart</h1>
-        <button id="togle-theme">Cambiar a tema oscuro</button>
+        <button id="btn">Cambiar a tema oscuro</button>
         <script>
-          const togleButton = document.getElementById("togle-theme");
+          const togleButton = document.getElementById("btn");
           togleButton.addEventListener("click", () => {
             document.body.classList.toggle("dark");
             togleButton.textContent = document.body.classList.contains("dark")
@@ -42,7 +42,7 @@
             <p>Consulta tus estadísticas personales de reciclaje</p>
           </li>
         </ul>
-        <button id="greenButton">
+        <button id="btn">
           <a href="">Empieza a Reciclar Ahora</a>
         </button>
       </div>
