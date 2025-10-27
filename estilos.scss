@@ -1,0 +1,28 @@
+$color_primario:#9acb4f;
+$color_secundario:#265902;
+$color_terciario:#092601;
+$color_cuaternario:#bfbdbd;
+
+
+
+
+@mixin tema-color($light-theme:true){
+  @if $light-theme {
+    background-color: $color_primario;
+    color: $color_terciario;
+  } @else {
+    background-color: $color_terciario;
+    color: $color_cuaternario;
+  }
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0px;
+  padding:0;
+
+}
+body.dark{
+  background-color: $color_terciario;
+  
+} 
