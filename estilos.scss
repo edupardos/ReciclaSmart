@@ -4,7 +4,7 @@ $color_secundario: #9acb4f; // Verde claro para hover del botón
 $color_terciario: #bfbdbd; // Gris para texto de botones y banners
 $color_cuaternario: #265902;
 $color_fondo: #d5efae; // Verde medio para fondos de botones
-  
+
 // Mixin para colores de tema
 @mixin tema-color($light-theme: true) {
   @if $light-theme {
@@ -31,17 +31,26 @@ body.dark {
   color: $color_terciario;
 }
 
-@media (max-width: 767px) {
-    #contenedorLanding h2 {
-      font-family: "Permanent Marker", sans-serif;
-    }
-  }
+img {
+  height: 80px;
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    #contenedorLanding h2 {
-      font-family: "Bungee", sans-serif;
-    }
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
   }
+}
+
+@media (max-width: 767px) {
+  #contenedorLanding h2 {
+    font-family: "Permanent Marker", sans-serif;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #contenedorLanding h2 {
+    font-family: "Bungee", sans-serif;
+  }
+}
 
 // Menú
 #menu {
@@ -85,6 +94,21 @@ body.dark {
 // Aplicar estilo al botón
 #btn {
   @include button-style;
+}
+
+#btnRecicla {
+  @include button-style;
+  background-color: $color_terciario;
+  
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $color_secundario;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 #contenedorLanding {
