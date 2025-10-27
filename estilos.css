@@ -1,1 +1,9 @@
-/*# sourceMappingURL=estilos.css.map */
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0px;
+  padding: 0;
+}
+
+body.dark {
+  background-color: #092601;
+}/*# sourceMappingURL=estilos.css.map */
