@@ -1,28 +1,142 @@
-$color_primario:#9acb4f;
-$color_secundario:#265902;
-$color_terciario:#092601;
-$color_cuaternario:#bfbdbd;
+// Paleta de colores reorganizada visualmente
+$color_primario: #092601;     // Usamos el verde más oscuro para encabezados/menu
+$color_secundario: #9acb4f;   // Verde claro para hover del botón
+$color_terciario: #bfbdbd;    // Gris para texto de botones y banners
+$color_cuaternario: #265902;
+$color_fondo:#d5efae;  // Verde medio para fondos de botones
 
-
-
-
+// Mixin para colores de tema
 @mixin tema-color($light-theme:true){
   @if $light-theme {
-    background-color: $color_primario;
-    color: $color_terciario;
+    background-color: $color_secundario; // fondo claro del banner
+    color: $color_primario;              // texto oscuro
   } @else {
-    background-color: $color_terciario;
-    color: $color_cuaternario;
+    background-color: $color_primario;   // fondo oscuro del banner
+    color: $color_cuaternario;           // texto verde medio
   }
 }
 
+// Reset y body
 body{
   font-family: 'Courier New', Courier, monospace;
   margin: 0px;
-  padding:0;
-
+  padding: 0;
+  background-color: $color_fondo;
 }
+
 body.dark{
-  background-color: $color_terciario;
-  
+  background-color: #051401;
+  color: $color_terciario;
+}
+
+// Menú
+#menu {
+  background-color: $color_primario;
+  display: flex;
+  gap: 1rem;
+  color: $color_terciario;
+  padding: 10px;
+}
+
+// Banner
+#banner{
+  @include tema-color($light-theme: true);
+  body.dark & {
+    @include tema-color($light-theme: false);
+  }
+}
+
+// Botón en el menú
+#menu button {
+  margin-left: auto;
+}
+
+// Mixin de estilo para botones
+@mixin button-style {
+  background-color: $color_cuaternario; // verde medio
+  color: $color_terciario;              // gris claro para texto
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color_terciario;
+    color:$color_primario // verde claro al pasar el ratón
+  }
+}
+
+// Aplicar estilo al botón
+#btn {
+  @include button-style;
+}
+
+#contenedorLanding {
+  background-color: $color_secundario; 
+  color: $color_primario;             
+    text-align: center;                  
+  padding: 80px 20px;                  
+  border-radius: 12px;                 
+  margin: 20px;                  
+                   
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+   h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto;                   
+  }
+
 } 
+
+#contenedorList {
+  background-color: $color_cuaternario; // verde medio de la paleta
+  color: $color_primario;             // texto gris claro
+  padding: 50px 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none; // quitar bullets
+    padding: 0;
+    margin: 0 0 30px 0;
+
+    li {
+      background-color: $color_secundario; // verde claro para cada item
+      margin-bottom: 15px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+      p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+ 
+
+  
+}
+
