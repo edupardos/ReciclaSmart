@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav id="menu">
-        <h1>ReciclaSmart</h1>
-        <button id="btn">Cambiar a tema oscuro</button>
-        <script>
-          const togleButton = document.getElementById("btn");
-          togleButton.addEventListener("click", () => {
-            document.body.classList.toggle("dark");
-            togleButton.textContent = document.body.classList.contains("dark")
-              ? "Cambiar a tema oscuro"
-              : "Cambiar a tema claro";
-          });
-        </script>
-        
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
 
-    <main>
-      <div id="contenedorLanding">
-        <h2>Haz del reciclaje tu aliado con la teconoloía</h2>
-        <h3>
-          ReciclaSmart te ayuda a reformar de forma mas eficiente y cómoda desde
-          cualquier lugar
-        </h3>
-      </div>
-      <div id="contenedorList">
-        <h4>Funciones Principales</h4>
-        <ul>
-          <li>
-            <p>Escanea códigos de productos para conocer cómo reciclarlos</p>
-            <p>Encuentra puntos de reciclaje cercanos</p>
-            <p>Consulta tus estadísticas personales de reciclaje</p>
-          </li>
-        </ul>
-        <button id="btn">
-          <a href="">Empieza a Reciclar Ahora</a>
-        </button>
-      </div>
-    </main>
+<body>
+  <header>
+    <nav id="menu">
+      <h1>ReciclaSmart</h1>
+      <button id="btn">Cambiar a tema oscuro</button>
+      <script>
+        const togleButton = document.getElementById("btn");
+        togleButton.addEventListener("click", () => {
+          document.body.classList.toggle("dark");
+          togleButton.textContent = document.body.classList.contains("dark")
+            ? "Cambiar a tema oscuro"
+            : "Cambiar a tema claro";
+        });
+      </script>
 
-    <footer>
-      <p>© 2025 ReciclaSmart - Recicla Smart</p>
-    </footer>
-  </body>
+    </nav>
+  </header>
+
+  <main>
+    <div id="contenedorLanding">
+      <h2>Haz del reciclaje tu aliado con la teconoloía</h2>
+      <h3>
+        ReciclaSmart te ayuda a reformar de forma mas eficiente y cómoda desde
+        cualquier lugar
+      </h3>
+    </div>
+    <div id="contenedorList">
+      <h4>Funciones Principales</h4>
+      <ul>
+        <li>
+          <p>Escanea códigos de productos para conocer cómo reciclarlos</p>
+          <p>Encuentra puntos de reciclaje cercanos</p>
+          <p>Consulta tus estadísticas personales de reciclaje</p>
+        </li>
+      </ul>
+      <button id="btn">
+        <a href="">Empieza a Reciclar Ahora</a>
+      </button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 ReciclaSmart - Recicla Smart</p>
+  </footer>
+</body>
+
 </html>
