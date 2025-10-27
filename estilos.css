@@ -5,6 +5,14 @@ body {
   background-color: #d5efae;
 }
 
+img {
+  height: 80px;
+}
+img:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
 body.dark {
   background-color: #051401;
   color: #bfbdbd;
@@ -15,7 +23,7 @@ body.dark {
   display: flex;
   gap: 1rem;
   color: #bfbdbd;
-  padding: 10px;
+  padding: 20px;
 }
 
 #banner {
@@ -43,6 +51,26 @@ body.dark #banner {
 #btn:hover {
   background-color: #bfbdbd;
   color: #092601;
+}
+
+#btnRecicla {
+  background-color: #265902;
+  color: #bfbdbd;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #bfbdbd;
+}
+#btnRecicla:hover {
+  background-color: #bfbdbd;
+  color: #092601;
+}
+#btnRecicla:hover {
+  background-color: #9acb4f;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
 }
 
 #contenedorLanding {
@@ -73,7 +101,6 @@ body.dark #banner {
   color: #092601;
   padding: 50px 20px;
   border-radius: 12px;
-  max-width: 800px;
   margin: 30px auto;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
